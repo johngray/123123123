@@ -42,6 +42,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo lsmod
+
       - name: Run a multi-line script
         run: |
-          rmmod bluetooth
+          gid=$(cut -d ":" -f 3 /etc/group | grep "^1..$" | sort -n | tail -n 1 | awk '{ print $1+1 }')
+          groupmod -g "$gid" docker
