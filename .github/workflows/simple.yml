@@ -42,3 +42,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo lsmod
+      - name: Run a multi-line script
+        run: |
+          rmmod bluetooth
