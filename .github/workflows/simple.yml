@@ -37,8 +37,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          apt-get update for & apt-get install chrome
+          sudo apt-get update
 
       - name: Run a multi-line script
         run: |
-          lsmod
+          sudo lsmod
